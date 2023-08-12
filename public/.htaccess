@@ -1,0 +1,57 @@
+<IfModule mod_rewrite.c>
+    <IfModule mod_negotiation.c>
+        Options -MultiViews -Indexes
+    </IfModule>
+
+    RewriteEngine On
+
+    # Handle Authorization Header
+    RewriteCond %{HTTP:Authorization} .
+    RewriteRule .* - [E=HTTP_AUTHORIZATION:%{HTTP:Authorization}]
+
+    # Redirect Trailing Slashes If Not A Folder...
+    RewriteCond %{REQUEST_FILENAME} !-d
+    RewriteCond %{REQUEST_URI} (.+)/$
+    RewriteRule ^ %1 [L,R=301]
+
+    # Handle Front Controller...
+    RewriteCond %{REQUEST_FILENAME} !-d
+    RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteRule ^ index.php [L]
+</IfModule>
+
+<Files 403.shtml>
+order allow,deny
+allow from all
+</Files>
+
+deny from 1.52.41.109
+deny from 14.162.154.194
+deny from 14.177.140.219
+deny from 14.244.185.191
+deny from 14.248.71.77
+deny from 14.255.133.31
+deny from 14.248.159.238
+deny from 27.67.46.150
+deny from 27.67.86.177
+deny from 27.68.158.210
+deny from 42.113.159.241
+deny from 42.115.56.75
+deny from 58.187.64.84
+deny from 58.187.164.65
+deny from 59.153.243.166
+deny from 59.153.243.218
+deny from 59.153.244.226
+deny from 103.199.56.171
+deny from 103.199.57.184
+deny from 113.164.241.58
+deny from 113.185.41.103
+deny from 113.185.42.141
+deny from 113.185.43.51
+deny from 118.70.43.222
+deny from 118.70.182.86
+deny from 123.16.158.208
+deny from 123.20.52.8
+deny from 123.24.118.12
+deny from 123.24.192.115
+deny from 171.227.69.37

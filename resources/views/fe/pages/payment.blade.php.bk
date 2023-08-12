@@ -1,0 +1,595 @@
+
+@extends('fe.layouts.index')
+
+@section('title')
+    
+@endsection
+@section('content')
+
+<div class="row sections-detail">
+    {{-- <div class="col-12">
+        <h2 class="section-title" id="register">THỦ TỤC NHẬP HỌC ĐĂNG KÝ THÀNH CÔNG!</h2>
+    </div> --}}
+    <h2 class="appointment-title">Thông tin đã đăng ký</h2>
+</div>
+<div class="row">
+    <div class="col-lg-12">
+        <div class="appointment" style="background-color: #fff; 
+        color: #000;">
+            <h2 class="appointment-title">Thông tin đã đăng ký</h2>
+            @if ($student->schools_id == 'Kiến Hưng' && $student->chuong_trinh == 'Truyền Thống')
+            <div class="row">
+                <div class="form-group col-sm-6 col-xs-12">
+                    <h1 style="font-size:130%;">HỌC SINH ĐK CƠ SỞ KIẾN HƯNG - CT TRUYỀN THỐNG CẦN LƯU Ý</h1>
+                    <p><b>19/4:</b> Thông báo danh sách học sinh được chọn vào lớp 1 trên bảng tin và website của
+                        trường</p>
+                    <p><b>21, 24/4:</b> Phát Giấy báo (Mẫu 3/TH2-TT hoặc Mẫu 3/TH2-OX) và làm thủ tục nhập học cho
+                        học sinh được chọn chính thức tại Văn phòng cơ sở Kiến Hưng</p>
+                    <p><b>23/4:</b> Nếu còn chỉ tiêu, làm thủ tục nhập học cho học sinh dự khuyết</p>
+                    <p><b>3/7 - 28/7:</b> Hoạt động hè tự nguyện</p>
+                    <p><b>1/8:</b> Tập chung toàn thể học sinh lớp 1, chuẩn bị năm học mới <b>2023 - 2024</b></p>
+                    <p><b>2. Kinh phí tháng 7/2023:</b> Tiền học, tiền ăn tiền đi xe bus của 1 tháng bình thường
+                        theo Biểu phí Tiểu học 2 2023 - 2024 (Chương trình Truyền thống)</p>
+                    
+                </div>
+                <div class="col-sm-6 form-group">
+                    <p><b>3. Kink phí tháng 8, 9/2023:</b></p>
+                    <table style="width:100%; border:5px solid rgb(255, 255, 255);">
+                        <tr>
+                            <td>- Tiền học:</td>
+                            <td style="text-align:right;">10.000.000đ/2 tháng</td>
+                        </tr>
+                        <tr>
+                            <td>- Tiền ăn sáng (35.000đ/suất):</td>
+                            <td style="text-align:right;">1.400.000đ/2 tháng</td>
+                        </tr>
+                        <tr>
+                            <td>- Tiếng Anh quốc tế :</td>
+                            <td style="text-align:right;">9.200.000đ (400USD)/1 học kỳ</td>
+                        </tr>
+                        <tr>
+                            <td>Hỗ trợ cơ sở vật chất:</td>
+                            <td style="text-align:right;">2.000.000đ /1 năm</td>
+                        </tr>
+                    </table>
+                    <p style="text-align:left; padding-left: 5px;">- Tiền ăn trưa và chiều (85.000đ/suất):
+                        3.400.000đ/2 tháng</p>
+                    <table style="width:100%; border:5px solid rgb(255, 255, 255);">
+                        <tr>
+                            <td>- Tiếng Anh quốc tế :</td>
+                            <td style="text-align:right;">9.200.000đ (400USD)/1 học kỳ</td>
+                        </tr>
+                        <tr>
+                            <td>- Hỗ trợ cơ sở vật chất:</td>
+                            <td style="text-align:right;">2.000.000đ /1 năm</td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>Thu hộ, chi hộ: </td>
+                        </tr>
+                        <tr>
+                            <td><span><i>Nếu đi xe bus:</i></span></td>
+                        </tr>
+                        <tr>
+                            <td>+ Điểm đón chung: </td>
+                            <td style="text-align:right;">3.000.000đ/2 tháng (gần)</td>
+                        </tr>
+                        <table style="width:100%; border:5px solid rgb(255, 255, 255); margin-top: -17px;">
+                            <tr>
+                                <td></td>
+                                <td style="text-align:right;">3.600.000đ/2 tháng ( xa )</td>
+                            </tr>
+                            <tr>
+                                <td>+ Điểm đón riêng:</td>
+                                <td style="text-align:right;">3.600.000đ/2 tháng (gần)</td>
+                            </tr>
+                        </table>
+                        <table style="width:100%; border:5px solid rgb(255, 255, 255); margin-top: -17px;">
+                            <tr>
+                                <td></td>
+                                <td style="text-align:right;">4.000.000đ/2 tháng ( xa )</td>
+                            </tr>
+                            <tr>
+                                <td>BHYT và BH TT (dự kiến)</td>
+                                <td style="text-align:right;">930.000đ/ năm</td>
+                            </tr>
+                        </table>
+                    </table>
+                </div>
+            </div>
+                @if ($student->schools_id == 'Kiến Hưng' && $student->chuong_trinh == 'Song Ngữ')
+                <div class="row">
+                    <div class="form-group col-sm-6 col-xs-12">
+                        <h1 style="font-size:130%;">HỌC SINH ĐK CƠ SỞ KIẾN HƯNG - CT SONG NGỮ CẦN LƯU Ý</h1>
+                        <p><b>19/4:</b> Thông báo danh sách học sinh được chọn vào lớp 1 trên bảng tin và website của
+                            trường</p>
+                        <p><b>21, 24/4:</b> Phát Giấy báo (Mẫu 3/TH2-TT hoặc Mẫu 3/TH2-OX) và làm thủ tục nhập học cho
+                            học sinh được chọn chính thức tại Văn phòng cơ sở Kiến Hưng</p>
+                        <p><b>23/4:</b> Nếu còn chỉ tiêu, làm thủ tục nhập học cho học sinh dự khuyết</p>
+                        <p><b>3/7 - 28/7:</b> Hoạt động hè tự nguyện</p>
+                        <p><b>1/8:</b> Tập chung toàn thể học sinh lớp 1, chuẩn bị năm học mới <b>2023 - 2024</b></p>
+                        <p><b>2. Kinh phí tháng 7/2023:</b> Tiền học, tiền ăn tiền đi xe bus của 1 tháng bình thường
+                            theo Biểu phí Tiểu học 2 2023 - 2024 (Chương trình Truyền thống)</p>
+
+                    </div>
+                    <div class="col-sm-6 form-group">
+                        
+                        <p><b>3. Kink phí tháng 8, 9/2023:</b></p>
+                        <table style="width:100%; border:5px solid rgb(255, 255, 255);">
+                            <tr>
+                                <td>- Tiền học:</td>
+                                <td style="text-align:right;">10.000.000đ/2 tháng</td>
+                            </tr>
+                            <tr>
+                                <td>- Tiền ăn sáng (35.000đ/suất):</td>
+                                <td style="text-align:right;">1.400.000đ/2 tháng</td>
+                            </tr>
+                            <tr>
+                                <td>- Tiếng Anh quốc tế :</td>
+                                <td style="text-align:right;">9.200.000đ (400USD)/1 học kỳ</td>
+                            </tr>
+                            <tr>
+                                <td>Hỗ trợ cơ sở vật chất:</td>
+                                <td style="text-align:right;">2.000.000đ /1 năm</td>
+                            </tr>
+                        </table>
+                        <p style="text-align:left; padding-left: 5px;">- Tiền ăn trưa và chiều (85.000đ/suất):
+                            3.400.000đ/2 tháng</p>
+                        <table style="width:100%; border:5px solid rgb(255, 255, 255);">
+                            <tr>
+                                <td>- Tiếng Anh quốc tế :</td>
+                                <td style="text-align:right;">9.200.000đ (400USD)/1 học kỳ</td>
+                            </tr>
+                            <tr>
+                                <td>- Hỗ trợ cơ sở vật chất:</td>
+                                <td style="text-align:right;">2.000.000đ /1 năm</td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>Thu hộ, chi hộ: </td>
+                            </tr>
+                            <tr>
+                                <td><span><i>Nếu đi xe bus:</i></span></td>
+                            </tr>
+                            <tr>
+                                <td>+ Điểm đón chung: </td>
+                                <td style="text-align:right;">3.000.000đ/2 tháng (gần)</td>
+                            </tr>
+                            <table style="width:100%; border:5px solid rgb(255, 255, 255); margin-top: -17px;">
+                                <tr>
+                                    <td></td>
+                                    <td style="text-align:right;">3.600.000đ/2 tháng ( xa )</td>
+                                </tr>
+                                <tr>
+                                    <td>+ Điểm đón riêng:</td>
+                                    <td style="text-align:right;">3.600.000đ/2 tháng (gần)</td>
+                                </tr>
+                            </table>
+                            <table style="width:100%; border:5px solid rgb(255, 255, 255); margin-top: -17px;">
+                                <tr>
+                                    <td></td>
+                                    <td style="text-align:right;">4.000.000đ/2 tháng ( xa )</td>
+                                </tr>
+                                <tr>
+                                    <td>BHYT và BH TT (dự kiến)</td>
+                                    <td style="text-align:right;">930.000đ/ năm</td>
+                                </tr>
+                            </table>
+                        </table>
+                    </div>
+                </div>
+                @if ($student->schools_id == 'Mỹ Đình' && $student->chuong_trinh == 'Truyền Thống')
+                <div class="row">
+                    <div class="form-group col-sm-6 col-xs-12">
+                        <h1 style="font-size:130%;">HỌC SINH ĐK CƠ SỞ MỸ ĐÌNH - CT TRUYỀN THỐNG CẦN LƯU Ý</h1>
+                        <p><b>19/4:</b> Thông báo danh sách học sinh được chọn vào lớp 1 trên bảng tin và website của
+                            trường</p>
+                        <p><b>21, 24/4:</b> Phát Giấy báo (Mẫu 3/TH2-TT hoặc Mẫu 3/TH2-OX) và làm thủ tục nhập học cho
+                            học sinh được chọn chính thức tại Văn phòng cơ sở Kiến Hưng</p>
+                        <p><b>23/4:</b> Nếu còn chỉ tiêu, làm thủ tục nhập học cho học sinh dự khuyết</p>
+                        <p><b>3/7 - 28/7:</b> Hoạt động hè tự nguyện</p>
+                        <p><b>1/8:</b> Tập chung toàn thể học sinh lớp 1, chuẩn bị năm học mới <b>2023 - 2024</b></p>
+                        <p><b>2. Kinh phí tháng 7/2023:</b> Tiền học, tiền ăn tiền đi xe bus của 1 tháng bình thường
+                            theo Biểu phí Tiểu học 2 2023 - 2024 (Chương trình Truyền thống)</p>
+
+                    </div>
+                    <div class="col-sm-6 form-group">
+                        
+                        <p><b>3. Kink phí tháng 8, 9/2023:</b></p>
+                        <table style="width:100%; border:5px solid rgb(255, 255, 255);">
+                            <tr>
+                                <td>- Tiền học:</td>
+                                <td style="text-align:right;">10.000.000đ/2 tháng</td>
+                            </tr>
+                            <tr>
+                                <td>- Tiền ăn sáng (35.000đ/suất):</td>
+                                <td style="text-align:right;">1.400.000đ/2 tháng</td>
+                            </tr>
+                            <tr>
+                                <td>- Tiếng Anh quốc tế :</td>
+                                <td style="text-align:right;">9.200.000đ (400USD)/1 học kỳ</td>
+                            </tr>
+                            <tr>
+                                <td>Hỗ trợ cơ sở vật chất:</td>
+                                <td style="text-align:right;">2.000.000đ /1 năm</td>
+                            </tr>
+                        </table>
+                        <p style="text-align:left; padding-left: 5px;">- Tiền ăn trưa và chiều (85.000đ/suất):
+                            3.400.000đ/2 tháng</p>
+                        <table style="width:100%; border:5px solid rgb(255, 255, 255);">
+                            <tr>
+                                <td>- Tiếng Anh quốc tế :</td>
+                                <td style="text-align:right;">9.200.000đ (400USD)/1 học kỳ</td>
+                            </tr>
+                            <tr>
+                                <td>- Hỗ trợ cơ sở vật chất:</td>
+                                <td style="text-align:right;">2.000.000đ /1 năm</td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>Thu hộ, chi hộ: </td>
+                            </tr>
+                            <tr>
+                                <td><span><i>Nếu đi xe bus:</i></span></td>
+                            </tr>
+                            <tr>
+                                <td>+ Điểm đón chung: </td>
+                                <td style="text-align:right;">3.000.000đ/2 tháng (gần)</td>
+                            </tr>
+                            <table style="width:100%; border:5px solid rgb(255, 255, 255); margin-top: -17px;">
+                                <tr>
+                                    <td></td>
+                                    <td style="text-align:right;">3.600.000đ/2 tháng ( xa )</td>
+                                </tr>
+                                <tr>
+                                    <td>+ Điểm đón riêng:</td>
+                                    <td style="text-align:right;">3.600.000đ/2 tháng (gần)</td>
+                                </tr>
+                            </table>
+                            <table style="width:100%; border:5px solid rgb(255, 255, 255); margin-top: -17px;">
+                                <tr>
+                                    <td></td>
+                                    <td style="text-align:right;">4.000.000đ/2 tháng ( xa )</td>
+                                </tr>
+                                <tr>
+                                    <td>BHYT và BH TT (dự kiến)</td>
+                                    <td style="text-align:right;">930.000đ/ năm</td>
+                                </tr>
+                            </table>
+                        </table>
+                    </div>
+
+                </div>
+                @if ($student->schools_id == 'Kiến Hưng' && $student->chuong_trinh == 'Song Ngữ')
+                <div class="row">
+                    <div class="form-group col-sm-6 col-xs-12">
+                        <h1 style="font-size:130%;">HỌC SINH ĐK CƠ SỞ MỸ ĐÌNH - CT SONG NGỮ CẦN LƯU Ý</h1>
+                        <p><b>19/4:</b> Thông báo danh sách học sinh được chọn vào lớp 1 trên bảng tin và website của
+                            trường</p>
+                        <p><b>21, 24/4:</b> Phát Giấy báo (Mẫu 3/TH2-TT hoặc Mẫu 3/TH2-OX) và làm thủ tục nhập học cho
+                            học sinh được chọn chính thức tại Văn phòng cơ sở Kiến Hưng</p>
+                        <p><b>23/4:</b> Nếu còn chỉ tiêu, làm thủ tục nhập học cho học sinh dự khuyết</p>
+                        <p><b>3/7 - 28/7:</b> Hoạt động hè tự nguyện</p>
+                        <p><b>1/8:</b> Tập chung toàn thể học sinh lớp 1, chuẩn bị năm học mới <b>2023 - 2024</b></p>
+                        <p><b>2. Kinh phí tháng 7/2023:</b> Tiền học, tiền ăn tiền đi xe bus của 1 tháng bình thường
+                            theo Biểu phí Tiểu học 2 2023 - 2024 (Chương trình Truyền thống)</p>
+
+                    </div>
+                    <div class="col-sm-6 form-group">
+                        
+                        <p><b>3. Kink phí tháng 8, 9/2023:</b></p>
+                        <table style="width:100%; border:5px solid rgb(255, 255, 255);">
+                            <tr>
+                                <td>- Tiền học:</td>
+                                <td style="text-align:right;">10.000.000đ/2 tháng</td>
+                            </tr>
+                            <tr>
+                                <td>- Tiền ăn sáng (35.000đ/suất):</td>
+                                <td style="text-align:right;">1.400.000đ/2 tháng</td>
+                            </tr>
+                            <tr>
+                                <td>- Tiếng Anh quốc tế :</td>
+                                <td style="text-align:right;">9.200.000đ (400USD)/1 học kỳ</td>
+                            </tr>
+                            <tr>
+                                <td>Hỗ trợ cơ sở vật chất:</td>
+                                <td style="text-align:right;">2.000.000đ /1 năm</td>
+                            </tr>
+                        </table>
+                        <p style="text-align:left; padding-left: 5px;">- Tiền ăn trưa và chiều (85.000đ/suất):
+                            3.400.000đ/2 tháng</p>
+                        <table style="width:100%; border:5px solid rgb(255, 255, 255);">
+                            <tr>
+                                <td>- Tiếng Anh quốc tế :</td>
+                                <td style="text-align:right;">9.200.000đ (400USD)/1 học kỳ</td>
+                            </tr>
+                            <tr>
+                                <td>- Hỗ trợ cơ sở vật chất:</td>
+                                <td style="text-align:right;">2.000.000đ /1 năm</td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>Thu hộ, chi hộ: </td>
+                            </tr>
+                            <tr>
+                                <td><span><i>Nếu đi xe bus:</i></span></td>
+                            </tr>
+                            <tr>
+                                <td>+ Điểm đón chung: </td>
+                                <td style="text-align:right;">3.000.000đ/2 tháng (gần)</td>
+                            </tr>
+                            <table style="width:100%; border:5px solid rgb(255, 255, 255); margin-top: -17px;">
+                                <tr>
+                                    <td></td>
+                                    <td style="text-align:right;">3.600.000đ/2 tháng ( xa )</td>
+                                </tr>
+                                <tr>
+                                    <td>+ Điểm đón riêng:</td>
+                                    <td style="text-align:right;">3.600.000đ/2 tháng (gần)</td>
+                                </tr>
+                            </table>
+                            <table style="width:100%; border:5px solid rgb(255, 255, 255); margin-top: -17px;">
+                                <tr>
+                                    <td></td>
+                                    <td style="text-align:right;">4.000.000đ/2 tháng ( xa )</td>
+                                </tr>
+                                <tr>
+                                    <td>BHYT và BH TT (dự kiến)</td>
+                                    <td style="text-align:right;">930.000đ/ năm</td>
+                                </tr>
+                            </table>
+                        </table>
+                    </div>
+                </div>
+                @if ($student->schools_id == 'Việt Hưng' && $student->chuong_trinh == 'Truyền Thống')
+                <div class="row">
+                    <div class="form-group col-sm-6 col-xs-12">
+                        <h1 style="font-size:130%;">HỌC SINH ĐK CƠ SỞ VIỆT HƯNG - CT TRUYỀN THỐNG CẦN LƯU Ý</h1>
+                        <p><b>19/4:</b> Thông báo danh sách học sinh được chọn vào lớp 1 trên bảng tin và website của
+                            trường</p>
+                        <p><b>21, 24/4:</b> Phát Giấy báo (Mẫu 3/TH2-TT hoặc Mẫu 3/TH2-OX) và làm thủ tục nhập học cho
+                            học sinh được chọn chính thức tại Văn phòng cơ sở Kiến Hưng</p>
+                        <p><b>23/4:</b> Nếu còn chỉ tiêu, làm thủ tục nhập học cho học sinh dự khuyết</p>
+                        <p><b>3/7 - 28/7:</b> Hoạt động hè tự nguyện</p>
+                        <p><b>1/8:</b> Tập chung toàn thể học sinh lớp 1, chuẩn bị năm học mới <b>2023 - 2024</b></p>
+                        <p><b>2. Kinh phí tháng 7/2023:</b> Tiền học, tiền ăn tiền đi xe bus của 1 tháng bình thường
+                            theo Biểu phí Tiểu học 2 2023 - 2024 (Chương trình Truyền thống)</p>
+
+                    </div>
+                    <div class="col-sm-6 form-group">
+                        
+                        <p><b>3. Kink phí tháng 8, 9/2023:</b></p>
+                        <table style="width:100%; border:5px solid rgb(255, 255, 255);">
+                            <tr>
+                                <td>- Tiền học:</td>
+                                <td style="text-align:right;">10.000.000đ/2 tháng</td>
+                            </tr>
+                            <tr>
+                                <td>- Tiền ăn sáng (35.000đ/suất):</td>
+                                <td style="text-align:right;">1.400.000đ/2 tháng</td>
+                            </tr>
+                            <tr>
+                                <td>- Tiếng Anh quốc tế :</td>
+                                <td style="text-align:right;">9.200.000đ (400USD)/1 học kỳ</td>
+                            </tr>
+                            <tr>
+                                <td>Hỗ trợ cơ sở vật chất:</td>
+                                <td style="text-align:right;">2.000.000đ /1 năm</td>
+                            </tr>
+                        </table>
+                        <p style="text-align:left; padding-left: 5px;">- Tiền ăn trưa và chiều (85.000đ/suất):
+                            3.400.000đ/2 tháng</p>
+                        <table style="width:100%; border:5px solid rgb(255, 255, 255);">
+                            <tr>
+                                <td>- Tiếng Anh quốc tế :</td>
+                                <td style="text-align:right;">9.200.000đ (400USD)/1 học kỳ</td>
+                            </tr>
+                            <tr>
+                                <td>- Hỗ trợ cơ sở vật chất:</td>
+                                <td style="text-align:right;">2.000.000đ /1 năm</td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>Thu hộ, chi hộ: </td>
+                            </tr>
+                            <tr>
+                                <td><span><i>Nếu đi xe bus:</i></span></td>
+                            </tr>
+                            <tr>
+                                <td>+ Điểm đón chung: </td>
+                                <td style="text-align:right;">3.000.000đ/2 tháng (gần)</td>
+                            </tr>
+                            <table style="width:100%; border:5px solid rgb(255, 255, 255); margin-top: -17px;">
+                                <tr>
+                                    <td></td>
+                                    <td style="text-align:right;">3.600.000đ/2 tháng ( xa )</td>
+                                </tr>
+                                <tr>
+                                    <td>+ Điểm đón riêng:</td>
+                                    <td style="text-align:right;">3.600.000đ/2 tháng (gần)</td>
+                                </tr>
+                            </table>
+                            <table style="width:100%; border:5px solid rgb(255, 255, 255); margin-top: -17px;">
+                                <tr>
+                                    <td></td>
+                                    <td style="text-align:right;">4.000.000đ/2 tháng ( xa )</td>
+                                </tr>
+                                <tr>
+                                    <td>BHYT và BH TT (dự kiến)</td>
+                                    <td style="text-align:right;">930.000đ/ năm</td>
+                                </tr>
+                            </table>
+                        </table>
+                    </div>
+                </div>
+                @if ($student->schools_id == 'Việt Hưng' && $student->chuong_trinh == 'Song Ngữ')
+                <div class="row">
+                    <div class="form-group col-sm-6 col-xs-12">
+                        <h1 style="font-size:130%;">HỌC SINH ĐK CƠ SỞ VIỆT HƯNG - CT SONG NGỮ CẦN LƯU Ý</h1>
+                        <p><b>19/4:</b> Thông báo danh sách học sinh được chọn vào lớp 1 trên bảng tin và website của
+                            trường</p>
+                        <p><b>21, 24/4:</b> Phát Giấy báo (Mẫu 3/TH2-TT hoặc Mẫu 3/TH2-OX) và làm thủ tục nhập học cho
+                            học sinh được chọn chính thức tại Văn phòng cơ sở Kiến Hưng</p>
+                        <p><b>23/4:</b> Nếu còn chỉ tiêu, làm thủ tục nhập học cho học sinh dự khuyết</p>
+                        <p><b>3/7 - 28/7:</b> Hoạt động hè tự nguyện</p>
+                        <p><b>1/8:</b> Tập chung toàn thể học sinh lớp 1, chuẩn bị năm học mới <b>2023 - 2024</b></p>
+                        <br>
+                        <p><b>2. Kinh phí tháng 7/2023:</b> Tiền học, tiền ăn tiền đi xe bus của 1 tháng bình thường
+                            theo Biểu phí Tiểu học 2 2023 - 2024 (Chương trình Truyền thống)</p>
+                        
+
+                    </div>
+                    <div class="col-sm-6 form-group">
+                        <p><b>3. Kink phí tháng 8, 9/2023:</b></p>
+                        <table style="width:100%; border:5px solid rgb(255, 255, 255);">
+                            <tr>
+                                <td>- Tiền học:</td>
+                                <td style="text-align:right;">10.000.000đ/2 tháng</td>
+                            </tr>
+                            <tr>
+                                <td>- Tiền ăn sáng (35.000đ/suất):</td>
+                                <td style="text-align:right;">1.400.000đ/2 tháng</td>
+                            </tr>
+                            <tr>
+                                <td>- Tiếng Anh quốc tế :</td>
+                                <td style="text-align:right;">9.200.000đ (400USD)/1 học kỳ</td>
+                            </tr>
+                            <tr>
+                                <td>Hỗ trợ cơ sở vật chất:</td>
+                                <td style="text-align:right;">2.000.000đ /1 năm</td>
+                            </tr>
+                        </table>
+                        <p style="text-align:left; padding-left: 5px;">- Tiền ăn trưa và chiều (85.000đ/suất):
+                            3.400.000đ/2 tháng</p>
+                        <table style="width:100%; border:5px solid rgb(255, 255, 255);">
+                            <tr>
+                                <td>- Tiếng Anh quốc tế :</td>
+                                <td style="text-align:right;">9.200.000đ (400USD)/1 học kỳ</td>
+                            </tr>
+                            <tr>
+                                <td>- Hỗ trợ cơ sở vật chất:</td>
+                                <td style="text-align:right;">2.000.000đ /1 năm</td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>Thu hộ, chi hộ: </td>
+                            </tr>
+                            <tr>
+                                <td><span><i>Nếu đi xe bus:</i></span></td>
+                            </tr>
+                            <tr>
+                                <td>+ Điểm đón chung: </td>
+                                <td style="text-align:right;">3.000.000đ/2 tháng (gần)</td>
+                            </tr>
+                            <table style="width:100%; border:5px solid rgb(255, 255, 255); margin-top: -17px;">
+                                <tr>
+                                    <td></td>
+                                    <td style="text-align:right;">3.600.000đ/2 tháng ( xa )</td>
+                                </tr>
+                                <tr>
+                                    <td>+ Điểm đón riêng:</td>
+                                    <td style="text-align:right;">3.600.000đ/2 tháng (gần)</td>
+                                </tr>
+                            </table>
+                            <table style="width:100%; border:5px solid rgb(255, 255, 255); margin-top: -17px;">
+                                <tr>
+                                    <td></td>
+                                    <td style="text-align:right;">4.000.000đ/2 tháng ( xa )</td>
+                                </tr>
+                                <tr>
+                                    <td>BHYT và BH TT (dự kiến)</td>
+                                    <td style="text-align:right;">930.000đ/ năm</td>
+                                </tr>
+                            </table>
+                        </table>
+                    </div>
+                </div> 
+                @endif
+                @endif
+                @endif
+                @endif
+            @endif
+            @endif
+
+
+
+            <h2 class="appointment-title">Thông tin thanh toán</h2>
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="title-wrapper">
+                        <div class="title-h2">
+                            <h2>Quý phụ huynh vui lòng hoàn thành thanh toán theo hướng dẫn bên
+                                dưới.</h2>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div style="text-align: left;">
+                <br>
+                <h3><strong>Cách 1: Chuyển khoản cho nhà trường theo thông tin:</strong></h3>
+                <p>
+                    <strong>Ngân hàng: </strong> ABCDXYZ Việt Nam (BANK) - Chi nhánh Hà Nội
+                </p>
+                <p>
+                    <strong>Chủ tài khoản:</strong> MC
+                </p>
+                <p>
+                    <strong>Số tài khoản:</strong> xxxxxxxxxxx
+                </p>
+                <p> 
+                    <strong>Số tiền: xxxxxxxx VNĐ</strong>
+                </p>
+                <p>
+                    <strong>Nội dung chuyển khoản:</strong>
+                    <span class="red-text">
+                        {{$student->code}}-{{$student->fullname}}</span>
+                </p>
+                <b>Hoặc</b>
+                <p>
+                    <strong>Ngân hàng: </strong> ABCDEF Việt Nam (BANK)- Hà Nội
+                </p>
+                <p>
+                    <strong>Chủ tài khoản:</strong> MC SCHOOLS
+                </p>
+                <p>
+                    <strong>Số tài khoản:</strong> xxxxxxxxxxxxxx
+                </p>
+                <p>
+                    <strong>Số tiền: xxxxxxxx VNĐ</strong>
+                    {{-- <strong>Số tiền:</strong> @if ($student->combo == 0)
+                    350.000 vnđ
+                    @else
+                    600.000 vnđ
+                    @endif --}}
+                </p>
+                <p>
+                    <strong>Nội dung chuyển khoản:</strong>
+                    <span class="red-text">
+                        {{$student->code}}-{{$student->fullname}}</span>
+                </p>
+            </div>
+
+        </div>
+    </div>
+    
+</div>
+<div class="inside-container join-us-section" style="padding-bottom: 0px;">
+    <div class="row">
+        <div class="col-12">
+            <a href="/" class="join-us-btn">Về trang chủ</a>
+        </div>
+    </div>
+</div>
+@endsection
