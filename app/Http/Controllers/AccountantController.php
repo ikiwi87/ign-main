@@ -76,6 +76,7 @@ class AccountantController extends Controller
             }
             if ($student->deposit == 2) {
                 $student->act_deposit = "
+                <p class='text-center text-danger'>Chờ xác nhận</p>
                 <div class='d-flex'>
                     <a href='/admin/accountant/list-update?id={$student->id}&type=1' class='btn btn-success btn-sm '>Đặt cọc</a>
                     <a href='/admin/accountant/list-update?id={$student->id}&type=0' class='btn btn-primary btn-sm ml-2'>Không cần đặt cọc</a>
@@ -83,6 +84,7 @@ class AccountantController extends Controller
             ";
             } else {
                 $student->act_deposit = "
+                <p class='text-center'>{$this->isActive($student)}</p>
                 <div class='d-flex'>
                     <a href='/admin/accountant/list-update?id={$student->id}&type=1' class='btn btn-success btn-sm {$this->isDeposit($student)} '>Đặt cọc</a>
                     <a href='/admin/accountant/list-update?id={$student->id}&type=0' class='btn btn-primary btn-sm ml-2 {$this->isNotDeposit($student)}'>Không cần đặt cọc</a>
@@ -102,6 +104,15 @@ class AccountantController extends Controller
             'recordsFiltered' => intval($students->count()),
             'data'            => $students
         ]);
+    }
+
+    public function isActive($student)
+    {
+        if($student->deposit == 1){
+            return 'Đã đặt cọc';
+        }else{
+            return 'Không cần đặt cọc';
+        }
     }
 
     public function isDeposit($student)

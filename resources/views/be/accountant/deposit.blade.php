@@ -41,7 +41,7 @@
                         <th>Hình thức thanh toán</th>
                         <th>Tình trạng</th>
                         <th>Ghi chú</th>
-                        <th>Thao tác</th>
+                        {{-- <th>Thao tác</th> --}}
                     </tr>
                     </thead>
                 </table>
@@ -89,7 +89,7 @@
                     { "data": "act_payment" },
                     { "data": "payment_done" },
                     { "data": "update_info" },
-                    { "data": "options" },
+                    // { "data": "options" },
                 ],
                 initComplete: async function (settings, json) {
                     $('.dataTables_length').parent().removeClass('col-md-4').addClass('col-md-8');
