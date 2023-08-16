@@ -40,7 +40,9 @@ class AccountantController extends Controller
             13 => 'parent_phone',
             14 => 'payment',
             15 => 'send_mail',
-            16 => 'id',
+            // 16 => 'desposit',
+            // 17 => 'update_info',
+            18 => 'id',
         ];
 
         $order = data_get($columns, $request->input('order.0.column'));

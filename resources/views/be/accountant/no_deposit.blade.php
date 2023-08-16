@@ -39,8 +39,8 @@
                         <th>Email</th>
                         <th>Tên phụ huynh</th>
                         <th>SDT</th>
-{{--                        <th>Tình trạng duyệt HS</th>--}}
-{{--                        <th>Mail</th>--}}
+                       <th>Trạng thái</th>
+                       <th>Ghi chú</th>
                         {{-- <th>Giấy khai sinh</th>
                         <th>Giấy báo</th> --}}
                         <th>Thao tác</th>
@@ -89,8 +89,8 @@
                     { "data": "email" },
                     { "data": "name_cha" },
                     { "data": "phone_cha" },
-                    // { "data": "payment" },
-                    // { "data": "send_mail" },
+                    // { "data": "desposit" },
+                    // { "data": "update_info" },
                     { "data": "options" }
                 ],
                 initComplete: async function (settings, json) {
