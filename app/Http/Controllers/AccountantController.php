@@ -222,17 +222,20 @@ class AccountantController extends Controller
             if ($student->combo == 1) {
                 $student['payment'] = "<p class='btn btn-info' >Đã xác nhận</p>";
             }
-            if ($student->payment_method == 'Tiền mặt') {
-                $student->act_payment = "<select class='act_payment' data-id='{$student->id}'>
-                    <option selected value='0'>Tiền mặt</option>
-                    <option value='1'>Chuyển khoản</option>
-                </select>";
-            } else {
-                $student->act_payment = "<select class='act_payment' data-id='{$student->id}'>
-                    <option value='0'>Tiền mặt</option>
-                    <option selected value='1'>Chuyển khoản</option>
-                </select>";
-            }
+            // if ($student->payment_method == 'Tiền mặt') {
+            //     $student->act_payment = "<select class='act_payment' data-id='{$student->id}'>
+            //         <option selected value='0'>Tiền mặt</option>
+            //         <option value='1'>Chuyển khoản</option>
+            //     </select>";
+            // } else {
+            //     $student->act_payment = "<select class='act_payment' data-id='{$student->id}'>
+            //         <option value='0'>Tiền mặt</option>
+            //         <option selected value='1'>Chuyển khoản</option>
+            //     </select>";
+            // }
+            $student->act_payment = "
+            <a href='#' class='btn btn-warning btn-sm '>Pending</a>
+            ";
 
             if ($student->payment_done == 2) {
 
