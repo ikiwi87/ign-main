@@ -9,27 +9,22 @@ Dự Trải Nghiệm
     <div class="ibox">
         <div class="ibox-head">
             <div class="ibox-title">Danh sách</div>
-            <div>
+            {{-- <div>
                 <a href="{{route('dutrainghiem_admin_create')}}" class="btn btn-primary">Create New</a>
-            </div>
+            </div> --}}
         </div>
         <div class="ibox-body" style="overflow-x:auto;">
             <table class="table table-striped table-bordered table-hover" id="example-table" cellspacing="0"
                 width="100%">
                 <thead>
                     <tr>
-                        <th>Id</th>
-                        <th>Code</th>
-                        <th>Fullname</th>
-                        <th>Day</th>
-                        <th>Month</th>
-                        <th>Year</th>
-                        <th>dob</th>
-                        <th>Parent Name</th>
-                        <th>Parent Phone</th>
-                        <th>Ngày dự trải nghiệm</th>
+                        <th>Họ và Tên</th>
+                        <th>Ngày sinh</th>
+                        <th>Giới tính</th>
+                        <th>Tên phụ huynh</th>
+                        <th>SDT</th>
                         <th>Địa điểm tham gia</th>
-                        <th>Action</th>
+                        <th>Ngày tham gia</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -43,7 +38,7 @@ Dự Trải Nghiệm
 @section('script')
 
 <script src="assets/vendors/DataTables/datatables.min.js" type="text/javascript"></script>
-
+{{--
 <script type="text/javascript">
    $(document).ready(function () {
         $('#example-table').DataTable({
@@ -72,5 +67,5 @@ Dự Trải Nghiệm
             ]
         });
     });
-</script>
+</script> --}}
 @endsection

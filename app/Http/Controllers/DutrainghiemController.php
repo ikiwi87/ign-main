@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\c;
 use DB;
 use App\Dutrainghiem;
+use App\Student;
 use Illuminate\Http\Request;
 
 class DutrainghiemController extends Controller
@@ -133,6 +134,7 @@ class DutrainghiemController extends Controller
 
     public function admin_index()
     {
+        $students = Student::where('payment_done');
         return view('be/dutrainghiem/list');
     }
     public function admin_create()
